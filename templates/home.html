@@ -1,0 +1,11 @@
+<head>
+  <title>选个吧</title>
+   <h1>黄色网站！</h1></hr>
+</head>
+</br>
+{% for i in range(lenth) %}
+    <a href="/{{dirlist[i]}}">{{namelist[i].decode('utf-8')}}</a></br>
+{% endfor %}
+<img src="{{url_for('static',filename='2.jpg')}}"/>
+</body>
+</html>

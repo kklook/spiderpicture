@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{name.decode('utf-8')}}</title>
+    <h1>{{name.decode('utf-8')}}</h1>
+</head>
+<body>
+{% for i in imagelist %}
+<center><img src="{{url_for(path,filename=i)}}"  /></center></br>
+{% endfor %}
+</body>
+</html>

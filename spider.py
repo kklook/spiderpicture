@@ -45,7 +45,7 @@ class Spider(object):
                     continue
                 else:
                     break
-        with open(dirname+'\\'+str(i)+'.jpg','wb') as f:
+        with open('static\\'+dirname+'\\'+str(i)+'.jpg','wb') as f:
             f.write(date)
     def saveImg(self,i,end,dirname):
         k=1
@@ -74,8 +74,9 @@ class Spider(object):
             dirname=re.findall(self.compile(self.rule_3),value.group(1))
             p=p[-1]
             dirname=dirname[0]
-            self.mkdir(str(i))
-            with open(str(i)+'\\'+'name.txt','w') as f:
+            self.mkdir('static')
+            self.mkdir('static\\'+str(i))
+            with open('static\\'+str(i)+'\\'+'name.txt','w') as f:
                 f.write(dirname)
             self.saveImg(i,int(p),str(i))
             i=i+1
